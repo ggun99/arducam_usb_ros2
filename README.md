@@ -3,34 +3,6 @@
 ArduCAM USB Shield 및 카메라 모듈(예: IMX708, AR1820 등)을 ROS2 Humble/Foxy 환경에서 사용하기 위한 스테레오 드라이버 패키지입니다. 본 패키지는 두 대의 카메라 영상을 동시에 캡처하여 sensor_msgs/Image 및 sensor_msgs/CameraInfo 메시지로 발행합니다.
 
 ## 주요 특징
-- 스테레오 지원: 두 대의 카메라를 독립적인 노드 루프 내에서 동기화하여 발행합니다.
-- 내부 파라미터 지원: .npy 파일을 통해 카메라 캘리브레이션 정보(CameraInfo)를 함께 제공합니다.
-- 유연한 설정: 실행 시 해상도, 프레임 레이트, 설정 파일(.cfg)을 인자로 전달할 수 있습니다.
----
-
-## Prerequisites
-
-패키지를 빌드하고 실행하기 위해 다음 라이브러리들이 필요합니다.
-
-### 1. ArduCAM SDK & Config Parser
-pip3 install arducam-config-parser numpy opencv-python
-
-### 2. ROS2 Dependencies
-sudo apt update
-sudo apt install ros-humble-cv-bridge ros-humble-image-transport
-
----
-
-## How to Build
-
-
----
-
-# ArduCAM USB ROS2 Stereo Publisher
-
-ArduCAM USB Shield 및 카메라 모듈(예: IMX708, AR1820 등)을 ROS2 Humble/Foxy 환경에서 사용하기 위한 스테레오 드라이버 패키지입니다. 본 패키지는 두 대의 카메라 영상을 동시에 캡처하여 sensor_msgs/Image 및 sensor_msgs/CameraInfo 메시지로 발행합니다.
-
-## 주요 특징
 * 스테레오 지원: 두 대의 카메라를 독립적인 노드 루프 내에서 동기화하여 발행합니다.
 * 내부 파라미터 지원: .npy 파일을 통해 카메라 캘리브레이션 정보(CameraInfo)를 함께 제공합니다.
 * 유연한 설정: 실행 시 해상도, 프레임 레이트, 설정 파일(.cfg)을 인자로 전달할 수 있습니다.
@@ -42,20 +14,22 @@ ArduCAM USB Shield 및 카메라 모듈(예: IMX708, AR1820 등)을 ROS2 Humble/
 패키지를 빌드하고 실행하기 위해 다음 라이브러리들이 필요합니다.
 
 ### 1. ArduCAM SDK & Config Parser
+```
 pip3 install arducam-config-parser numpy opencv-python
-
+```
 ### 2. ROS2 Dependencies
+```
 sudo apt update
 sudo apt install ros-humble-cv-bridge ros-humble-image-transport
-
+```
 ---
 
 ## How to Build
 
 작업 공간(Workspace)의 src 폴더에 클론한 뒤 빌드합니다.
-
+```
 cd ~/ros2_ws/src
-git clone [https://github.com/ggun99/이해했습니다](https://github.com/ggun99/이해했습니다). 마크다운 문법 기호(``` 등)가 섞여 있으면 복사 과정에서 텍스트와 코드가 엉키기 쉽죠.
+```
 
 ---
 
@@ -75,33 +49,36 @@ ArduCAM USB Shield 및 카메라 모듈(예: IMX708, AR1820 등)을 ROS2 Humble/
 패키지를 빌드하고 실행하기 위해 다음 라이브러리들이 필요합니다.
 
 ### 1. ArduCAM SDK & Config Parser
+```
 pip3 install arducam-config-parser numpy opencv-python
-
+```
 ### 2. ROS2 Dependencies
+```
 sudo apt update
 sudo apt install ros-humble-cv-bridge ros-humble-image-transport
-
+```
 ---
 
 ## How to Build
 
 작업 공간(Workspace)의 src 폴더에 클론한 뒤 빌드합니다.
-
+```
 cd ~/ros2_ws/src
 git clone https://github.com/ggun99/arducam_usb_ros2.git
-
+```
+```
 cd ~/ros2_ws
 colcon build --symlink-install --packages-select arducam_usb_ros2
 source install/setup.bash
-
+```
 ---
 
 ## How to Run
 
 기본 제공되는 .cfg 파일과 함께 노드를 실행합니다.
-
+```
 ros2 run arducam_usb_ros2 arducam_node --config-file AR1820_MIPI_4Lane_RAW10_8b_1920x1080_120fps.cfg
-
+```
 ---
 
 ## Parameters

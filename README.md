@@ -43,6 +43,10 @@ ArduCAM USB Shield 및 카메라 모듈(예: IMX708, AR1820 등)을 ROS2 Humble/
 * 유연한 설정: 실행 시 해상도, 프레임 레이트, 설정 파일(.cfg)을 인자로 전달할 수 있습니다.
 
 ---
+### Install USB Driver
+
+[이 곳](https://github.com/ArduCAM/ArduCAM_USB_Camera_Shield_Python_Demo)에서 linux와 Windows용 usb 드라이버를 다운받으실 수 있습니다.
+
 
 ## Prerequisites
 
@@ -50,7 +54,7 @@ ArduCAM USB Shield 및 카메라 모듈(예: IMX708, AR1820 등)을 ROS2 Humble/
 
 ### 1. ArduCAM SDK & Config Parser
 ```
-pip3 install arducam-config-parser numpy opencv-python
+pip3 install arducam-config-parser numpy opencv-python ArducamSDK
 ```
 ### 2. ROS2 Dependencies
 ```
@@ -109,5 +113,9 @@ This project is licensed under the Apache License 2.0.
 ## Contact
 * Maintainer: Geon (xkrjs99@naver.com)
 * GitHub: ggun99
+
+## 🔗 Reference
+* [ArduCAM 공식 홈페이지](https://github.com/arducam/arducam_usb_camera_shield)
+* [ROS2 Humble Documentation](https://docs.ros.org/en/humble/)
 
 ---
